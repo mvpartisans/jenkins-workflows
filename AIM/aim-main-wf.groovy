@@ -1,7 +1,7 @@
 standardCignaBuild {
 
     envVars = {
-        mavenVersion = '3.3';
+        mavenVersion = 'Maven 3.3';
         jdkVersion = 'JDK8'
     }
 
