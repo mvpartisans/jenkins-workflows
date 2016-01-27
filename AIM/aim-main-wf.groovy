@@ -1,3 +1,7 @@
+    jira = new Jira()
+    jira.notify()
+    println "noified Jira"
+
 standardCignaBuild {
 
     envVars = {
