@@ -2,7 +2,7 @@
     //jira.notify()
     //println "noified Jira"
     
-    acme = new utils.Acme();
+    acme = new com.cigna.utils.Acme();
     acme.say('imran');
 
 
