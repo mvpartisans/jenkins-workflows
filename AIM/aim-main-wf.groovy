@@ -2,7 +2,7 @@
     //jira.notify()
     //println "noified Jira"
     
-    acme = new Acme();
+    acme = new utils.Acme();
     acme.say('imran');
 
 
