@@ -6,7 +6,7 @@
     acme.say('imran');
     
     jira = new com.cigna.utils.Jira();
-    jira.notify();
+    jira.notification();
 
 
 standardCignaBuild {
