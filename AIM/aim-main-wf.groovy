@@ -1,3 +1,5 @@
+logger = new com.cigna.utils.JenkinsLogger();
+
 standardCignaBuild {
 
     envVars = {
