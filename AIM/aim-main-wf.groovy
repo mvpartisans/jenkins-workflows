@@ -24,6 +24,12 @@ standardCignaBuild {
         println 'Build some project'
         println 'git repo'
         println 'compile & build'
+        
+        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        mvn('-B -Dmaven.test.failure.ignore verify')
+
+        //step([$class: 'ArtifactArchiver', artifacts: '**/target/*.jar', fingerprint: true])
+
     }
 
     postBuild = {
