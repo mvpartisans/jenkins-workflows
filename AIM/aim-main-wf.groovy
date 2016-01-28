@@ -8,7 +8,7 @@ standardCignaBuild {
     envVars = {
         mavenVersion = 'Maven 3.3';
         jdkVersion = 'JDK8'
-        OS = 'windows'
+        //OS = 'windows'
     }
 
     preBuild = {
@@ -25,13 +25,11 @@ standardCignaBuild {
         def mvnHome = tool mavenVersion
         sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
         
-
-        step([$class: 'ArtifactArchiver', artifacts: '**/target/*.jar', fingerprint: true])
-
     }
 
     postBuild = {
         println 'post build from dev'
+        step([$class: 'ArtifactArchiver', artifacts: '**/target/*.jar', fingerprint: true])        
     }
 
 }
