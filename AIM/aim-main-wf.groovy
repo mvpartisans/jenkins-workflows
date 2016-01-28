@@ -1,6 +1,7 @@
 
     //jira = new com.cigna.utils.Jira();
     //jira.notification();
+    logger = new com.cigna.utils.JenkinsLogger();
 
 
 standardCignaBuild {
@@ -21,6 +22,8 @@ standardCignaBuild {
         println 'compile & build'
         
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        logger.log('pulled from GIT repo');
+        
         //mvn(mavenVersion, '-B -Dmaven.test.failure.ignore verify');
         def mvnHome = tool mavenVersion
         sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
