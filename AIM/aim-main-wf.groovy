@@ -1,12 +1,6 @@
-    //jira = new Jira()
-    //jira.notify()
-    //println "noified Jira"
-    
-    acme = new com.cigna.utils.Acme();
-    acme.say('imran');
-    
-    jira = new com.cigna.utils.Jira();
-    jira.notification();
+
+    //jira = new com.cigna.utils.Jira();
+    //jira.notification();
 
 
 standardCignaBuild {
