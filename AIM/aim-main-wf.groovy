@@ -8,6 +8,7 @@ standardCignaBuild {
     envVars = {
         mavenVersion = 'Maven 3.3';
         jdkVersion = 'JDK8'
+        OS = 'windows'
     }
 
     preBuild = {
