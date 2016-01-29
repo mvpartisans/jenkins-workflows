@@ -20,9 +20,9 @@ standardCignaBuild {
                 who:"imran",
                 what:"git ${scmUrl}"])
         
-        //mvn(mavenVersion, '-B -Dmaven.test.failure.ignore verify');
-        def mvnHome = tool mavenVersion
-        sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
+        mvn(mavenVersion, '-B -Dmaven.test.failure.ignore verify');
+        //def mvnHome = tool mavenVersion
+        //sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
         
     }
 
