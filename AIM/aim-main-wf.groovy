@@ -1,4 +1,4 @@
-audit = new com.cigna.utils.AuditTrace();
+audit = new com.cigna.utils.AuditTrail();
 
 standardCignaBuild {
 
