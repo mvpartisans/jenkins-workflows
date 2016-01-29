@@ -19,7 +19,7 @@ standardCignaBuild {
         
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
         
-        audit([category:"build",
+        audit.log([category:"build",
                 who:"imran",
                 what:"git checkout"])
         
