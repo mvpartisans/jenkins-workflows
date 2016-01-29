@@ -13,15 +13,12 @@ standardCignaBuild {
     }
 
     build = {
-        println 'Build some project'
-        println 'git repo'
-        println 'compile & build'
+        def scmUrl = 'https://github.com/jglick/simple-maven-project-with-tests.git'
+        git scmUrl
         
-        git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-        
-        audit.log([category:"build",
+        audit.log([category:"scm",
                 who:"imran",
-                what:"git checkout"])
+                what:"git ${scmUrl}"])
         
         //mvn(mavenVersion, '-B -Dmaven.test.failure.ignore verify');
         def mvnHome = tool mavenVersion
@@ -31,7 +28,7 @@ standardCignaBuild {
 
     postBuild = {
         println 'post build from dev'
-        step([$class: 'ArtifactArchiver', artifacts: '**/target/*.jar', fingerprint: true])        
+        archiveArtifact([artifacts: '**/target/*.jar']);
     }
 
 }
