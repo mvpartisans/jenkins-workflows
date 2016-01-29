@@ -1,4 +1,4 @@
-logger = new com.cigna.utils.JenkinsLogger();
+audit = new com.cigna.utils.AuditTrace();
 
 standardCignaBuild {
 
@@ -18,7 +18,10 @@ standardCignaBuild {
         println 'compile & build'
         
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-        logger.log('pulled from GIT repo');
+        
+        audit([category:"build",
+                who:"imran",
+                what:"git checkout"])
         
         //mvn(mavenVersion, '-B -Dmaven.test.failure.ignore verify');
         def mvnHome = tool mavenVersion
