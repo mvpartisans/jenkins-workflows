@@ -28,7 +28,7 @@ standardCignaBuild {
 
     postBuild = {
         println 'post build from dev'
-        archiveArtifact([artifacts: '**/target/*.jar']);
+        archiveArtifact('**/target/*.jar');
     }
 
 }
