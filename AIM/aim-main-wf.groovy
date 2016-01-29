@@ -21,7 +21,7 @@ standardCignaBuild {
     }
 
     postBuild = {
-        println 'post build from dev'
+        audit.log([category:"build", who:"imran", what:"archived artifact"]);
         archiveArtifact('**/target/*.jar');
     }
 
