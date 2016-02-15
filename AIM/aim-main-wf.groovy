@@ -1,6 +1,6 @@
 audit = new com.cigna.utils.AuditTrail();
 
-standardCignaBuild {
+standardBuild {
 
     envVars = {
         mavenVersion = 'Maven 3.3';
