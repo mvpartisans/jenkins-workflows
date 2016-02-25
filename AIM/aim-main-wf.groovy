@@ -1,3 +1,5 @@
+echo 'hello 1'
+
 audit = new com.cigna.utils.AuditTrail();
 
 standardBuild {
