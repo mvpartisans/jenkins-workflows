@@ -1,4 +1,4 @@
-echo 'hello 6'
+echo 'hello 2'
 
 audit = new com.cigna.utils.AuditTrail();
 
