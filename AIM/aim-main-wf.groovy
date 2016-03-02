@@ -1,6 +1,4 @@
-echo 'hello 2'
-
-audit = new com.cigna.utils.AuditTrail();
+audit = new com.cloudbees.utils.AuditTrail();
 
 standardBuild {
 
